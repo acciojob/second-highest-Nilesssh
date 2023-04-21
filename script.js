@@ -8,10 +8,12 @@ function secondHighest(arr) {
 		return -Infinity;
 	}else{
 		let nice = [...new Set(arr)];
-		let ans = Arrays.sort(nice);
+		let ans = nice.sort((a,b)=> a-b);
+		
 		if(nice.length<2){
 			return -Infinity;
 		}else{
+			
 			return ans[ans.length-2];
 		}
 	}
